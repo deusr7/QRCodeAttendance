@@ -1,0 +1,35 @@
+
+
+
+@page {
+
+    size: A4;
+    margin: 0;
+    
+}
+
+@media print {
+    body {
+        font-size: 12pt;
+
+    }
+    input {
+        font-size: 14pt;
+    }
+
+    .update-btn, .delete-btn, .print-btn, .export-btn{
+        display: none;
+        visibility: hidden;
+    }
+
+    .sidenav {
+        display: none;
+        visibility: hidden;
+    }
+    .xls-con .export-btn {
+        display: none;
+        visibility: hidden;
+    }
+
+
+}
