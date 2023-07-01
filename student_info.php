@@ -65,7 +65,7 @@
     <title>Student Information</title>
 
 
-    <link rel="stylesheet" href="css/styles1.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/print.css" media="print">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 

@@ -63,7 +63,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
 
-    <link rel="stylesheet" href="css/styles1.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
@@ -73,6 +73,8 @@
             <i class="ri-user-2-fill"></i>
             <h4 class="username"><?php echo $_SESSION['fullname']; ?></h4>
             <p class="user-role">Instructor</p>
+            <hr>
+
             <div class="report-container">
                 <!-- OpenWeatherMap API  -->
                 <h4><?php echo $data->name; ?> Weather </h4>
@@ -85,12 +87,10 @@
                         class="weather-icon" /> 
                         <span class="min-temperature"><?php echo $data->main->temp_min - 273.15; ?> °C</span>
                 </div>
-                <div class="time">
+         
                     <div>Humidity: <?php echo $data->main->humidity; ?> %</div>
                     <div>Wind: <?php echo $data->wind->speed; ?> km/h</div>
-                </div>
             </div>
-            <hr>
         </div>
         <ul class="nav-buttons">
             <li><a href="dashboard.php"><i class="ri-home-3-line"></i>Home</a></li>
@@ -109,11 +109,12 @@
             <?php } ?>
             
             <li><a href="syslogin_functions/logout.php"><i class="ri-logout-circle-line"></i>Logout</a></li>
+            
         </ul>
     </div>
 
     <div class="main-content">
-        <div class="dashboard">
+        <!-- <div class="dashboard">
             <div class="class" onclick="showRegistrationForm()"><i class="ri-add-line"></i>Create class</div>
 
         </div>
@@ -130,6 +131,40 @@
 
                 </form>
                 <button class="close-btn" onclick="hideRegistrationForm()">Close</button>
+            </div>
+        </div> -->
+        <div class="mc-con">
+            
+            <center><img class="mc-logo" src="images/sharingan.png" alt=""></center>
+            <h2 class="mc-h2" >TRACK SYNC</h2>
+        </div>
+        
+        <button class="continue-application" onclick="showRegistrationForm()">
+            <div>
+                <div class="pencil"></div>
+                <div class="folder">
+                    <div class="top">
+                        <svg viewBox="0 0 24 27">
+                            <path d="M1,0 L23,0 C23.5522847,-1.01453063e-16 24,0.44771525 24,1 L24,8.17157288 C24,8.70200585 23.7892863,9.21071368 23.4142136,9.58578644 L20.5857864,12.4142136 C20.2107137,12.7892863 20,13.2979941 20,13.8284271 L20,26 C20,26.5522847 19.5522847,27 19,27 L1,27 C0.44771525,27 6.76353751e-17,26.5522847 0,26 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z"></path>
+                        </svg>
+                    </div>
+                    <div class="paper"></div>
+                </div>
+            </div>
+            Create Class
+        </button>
+        <div class="overlay" id="registrationFormOverlay">
+            <div class="registration-form">
+                <form class="form" action="main_functions/create_class.php" method="POST">
+                    <h2>CREATE CLASS</h2>
+                    <input type="text" id="subject_name" placeholder="Subject name" name="subName">
+                    <input type="text" id="section" placeholder="Section"name="section">
+                    <input type="text"  placeholder="Day"name="day">
+                    <input type="text"  placeholder="Time"name="time">
+                    <button class="crt-btn" type="submit" name="create">Create</button>
+                    <button class="close-btn" onclick="hideRegistrationForm()">Close</button>
+                </form>
+              
             </div>
         </div>
 
