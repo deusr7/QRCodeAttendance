@@ -63,7 +63,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
 
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles1.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
@@ -105,7 +105,7 @@
              ?>
              <?php while($row = mysqli_fetch_assoc($result) ) { ?>
                 <!-- Get the id of the class in the url -->
-                <li><a id="btn-clicked" href="student_info.php?cid=<?php echo $row['class_id']; ?>&csec=<?php echo $row['section']; ?>&ctid=<?php echo $row['teacher_id']; ?>"><i class="ri-health-book-line"></i><?php echo $row['subject_name'] ." ". $row['section'];?></a></li>
+                <li><a id="btn-clicked" href="student_info.php?cid=<?php echo $row['class_id']; ?>&csec=<?php echo $row['section']; ?>&ctid=<?php echo $row['teacher_id']; ?>"><i class="ri-booklet-line"></i><?php echo $row['subject_name'] ." ". $row['section'];?></a></li>
             <?php } ?>
             
             <li><a href="syslogin_functions/logout.php"><i class="ri-logout-circle-line"></i>Logout</a></li>

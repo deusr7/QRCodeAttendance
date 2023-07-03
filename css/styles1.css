@@ -85,7 +85,8 @@ form .row {
     padding-top: 20px;
     box-sizing: border-box;
     float: left;
-    /* position: fixed; */
+    position: relative;
+
 }
 /* navigation buttons */
 #btn-clicked {
@@ -134,7 +135,7 @@ form .row {
 .nav-buttons li a {
     color: #fff;
     text-decoration: none;
-    padding: 10px;
+    padding: 7px;
     display: block;
 }
 
@@ -311,13 +312,12 @@ button {
 
 }
 
-.ri-health-book-line {
+.ri-booklet-line {
     font-size: 25px;
     color: whitesmoke;
     margin-right: 10px;
 
 }
-
 
 .ri-delete-bin-line{
     color: #111827;
@@ -481,6 +481,9 @@ tr > th {
 .display-hide {
     display: none;
 }
+#hide {
+    display: relative;
+}
 
 /* Search Section Start */
 .search-form {
@@ -519,24 +522,28 @@ tr > th {
 .main-content .scanner-row {
     display: flex;
     justify-content: center;
+    padding: 20px;
 }
 .stop {
     margin-top: 10px;
     padding: 10px;
     font-size: 20px;
     color: #111827;
+    border: 1px solid #111827;
+    border-radius: 10px;
 }
 
 .stop:hover {
     background: #111827;
     color: whitesmoke;
     border-radius: 10px;
+    cursor: pointer;
     
 }
 
 #preview {
-    width: 900px;
-    height: 550px;
+    width: 800px;
+    height: 450px;
     border-radius: 10px;
 }
 

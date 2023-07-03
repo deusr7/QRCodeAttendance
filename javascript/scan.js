@@ -25,7 +25,7 @@ let opts = {
   
   // Only applies to continuous mode. The period, in milliseconds, before the same QR code
   // will be recognized in succession. Default 5000 (5 seconds).
-  refractoryPeriod: 5000,
+  refractoryPeriod: 3000,
   
   // Only applies to continuous mode. The period, in rendered frames, between scans. A lower scan period
   // increases CPU usage but makes scan response faster. Default 1 (i.e. analyze every frame).
